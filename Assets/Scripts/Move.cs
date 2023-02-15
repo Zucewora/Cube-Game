@@ -9,7 +9,7 @@ public class Move : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        float h = Input.GetAxis("Horizontal")*(1)*hSpeed ;//* Time.fixedTime;
+        float h = Input.GetAxis("Horizontal")*hSpeed ;
         float v = Input.GetAxis("Vertical")*speed;
         _rb.velocity = transform.TransformDirection(new Vector3(-v,_rb.velocity.y,h));
     }
